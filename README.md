@@ -236,6 +236,10 @@ yum install -y nfs-utils
 tridentctlコマンドでバックエンドとなるストレージ情報を登録
 　※ trident-installer/sample-inputにバックエンド登録用のサンプルファイルが置いてあるので、登録したい環境に合ったファイルを編集してください。
 （登録名、IP、クレデンシャル等を記載）
+
+定義用のjsonは以下のような感じ。
+![sample__backend-ontap-nas_AFF8040.json](sample__backend-ontap-nas_AFF8040.json)
+
 ```
 # ./tridentctl create backend -f ../backend-ontap-nas_AFF8040.json
 +---------+----------------+--------------------------------------+--------+---------+
@@ -357,6 +361,9 @@ ti_Trident_svm
 <br>
 
 ### Backend登録
+定義用のjsonは以下のような感じ。
+![sample__backend-ontap-san_AFF8040.json](sample__backend-ontap-san_AFF8040.json)
+
 ```
 [root@trident-001 trident-installer]# ./tridentctl create backend -f ../backend-ontap-san_AFF8040.json
 +---------------+----------------+--------------------------------------+--------+---------+
