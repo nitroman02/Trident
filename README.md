@@ -238,6 +238,7 @@ tridentctlコマンドでバックエンドとなるストレージ情報を登�
 （登録名、IP、クレデンシャル等を記載）
 
 定義用のjsonは以下のような感じ。
+
 [sample__backend-ontap-nas_AFF8040.json](sample__backend-ontap-nas_AFF8040.json)
 
 ```
@@ -362,6 +363,7 @@ ti_Trident_svm
 
 ### Backend登録
 定義用のjsonは以下のような感じ。
+
 [sample__backend-ontap-san_AFF8040.json](sample__backend-ontap-san_AFF8040.json)
 
 ```
