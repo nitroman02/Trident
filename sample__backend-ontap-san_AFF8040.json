@@ -1,0 +1,10 @@
+{
+    "version": 1,
+    "storageDriverName": "ontap-san",
+    "backendName": "AFF8040-iSCSI",
+    "managementLIF": "***.***.***.***",
+    "dataLIF": "***.***.***.***",
+    "svm": "ti_Trident_svm",
+    "username": "********",
+    "password": "********"
+}
