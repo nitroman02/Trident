@@ -241,6 +241,8 @@ tridentctlコマンドでバックエンドとなるストレージ情報を登�
 
 [sample__backend-ontap-nas_AFF8040.json](sample__backend-ontap-nas_AFF8040.json)
 
+
+tridentctl create backend -f <定義ファイル.json>コマンドで登録を実施。
 ```
 # ./tridentctl create backend -f ../backend-ontap-nas_AFF8040.json
 +---------+----------------+--------------------------------------+--------+---------+
@@ -366,6 +368,7 @@ ti_Trident_svm
 
 [sample__backend-ontap-san_AFF8040.json](sample__backend-ontap-san_AFF8040.json)
 
+NASの時と同様tridentctlコマンドでバックエンドとなるストレージを登録
 ```
 [root@trident-001 trident-installer]# ./tridentctl create backend -f ../backend-ontap-san_AFF8040.json
 +---------------+----------------+--------------------------------------+--------+---------+
@@ -382,6 +385,7 @@ ti_Trident_svm
 | AFF8040-iSCSI | ontap-san      | f24d9355-c42e-49de-8bb9-94cf7475507e | online |       0 |
 +---------------+----------------+--------------------------------------+--------+---------+
 ```
+AFF8040-iSCSIが登録された。
 
 ★ ONTAP側で iscsi create を実施せずにtridentctl cerate backendを実行しまった際のエラー
 
@@ -390,7 +394,7 @@ ti_Trident_svm
 <br>
 
 ### StorageClass作成
-StorageClass(ontap-iscsi)定義は以下を利用
+StorageClass(ontap-iscsi)定義は以下を利用。fsTypeはext4を指定。
 ```
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
